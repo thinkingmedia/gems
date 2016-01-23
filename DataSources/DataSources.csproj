@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BF20B96C-4D52-44E1-B8D6-E6BC5E138AC6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DataSources</RootNamespace>
+    <AssemblyName>DataSources</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.8.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\NoSweatBudgets\packages\MySql.ConnectorNET.Data.6.8.3.2\lib\net40\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Associations.cs" />
+    <Compile Include="Attributes\BelongsTo.cs" />
+    <Compile Include="Attributes\HasMany.cs" />
+    <Compile Include="BehaviorContainer.cs" />
+    <Compile Include="Behavior\ActiveBehavior.cs" />
+    <Compile Include="Behavior\DelayExtension.cs" />
+    <Compile Include="Behavior\KeyExntension.cs" />
+    <Compile Include="Behavior\PublishedExtension.cs" />
+    <Compile Include="Behavior\PublishedBehavior.cs" />
+    <Compile Include="Behavior\Behavior.cs" />
+    <Compile Include="Behavior\CounterBehavior.cs" />
+    <Compile Include="Behavior\DelayBehavior.cs" />
+    <Compile Include="Behavior\KeyBehavior.cs" />
+    <Compile Include="Behavior\TimestampBehavior.cs" />
+    <Compile Include="DataSource\DataSources.cs" />
+    <Compile Include="DataSource\iDataSource.cs" />
+    <Compile Include="DataSource\MySqlDataSource.cs" />
+    <Compile Include="DataSource\DataSourceResult.cs" />
+    <Compile Include="DataSource\MySqlRender.cs" />
+    <Compile Include="DefaultModelEvents.cs" />
+    <Compile Include="Exceptions\BehaviorException.cs" />
+    <Compile Include="Exceptions\DataSourceException.cs" />
+    <Compile Include="Exceptions\KeyNotFoundException.cs" />
+    <Compile Include="Exceptions\ModelException.cs" />
+    <Compile Include="Exceptions\OrderByException.cs" />
+    <Compile Include="IdSet.cs" />
+    <Compile Include="iModelEvents.cs" />
+    <Compile Include="iRecord.cs" />
+    <Compile Include="Model.cs" />
+    <Compile Include="ModelOptions.cs" />
+    <Compile Include="ModelRegistry.cs" />
+    <Compile Include="PrimaryValue.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Behavior\ActiveExtension.cs" />
+    <Compile Include="QueryCollection.cs" />
+    <Compile Include="Query\AbstractQueryFeature.cs" />
+    <Compile Include="Query\Conditions.cs" />
+    <Compile Include="Query\Fields.cs" />
+    <Compile Include="Query\FieldValue.cs" />
+    <Compile Include="Query\iCondition.cs" />
+    <Compile Include="Query\iFields.cs" />
+    <Compile Include="Query\iJoinable.cs" />
+    <Compile Include="Query\iParameters.cs" />
+    <Compile Include="Query\iQueryBuilder.cs" />
+    <Compile Include="Query\JoinTable.cs" />
+    <Compile Include="Query\Parameters.cs" />
+    <Compile Include="Query\QueryBuilder.cs" />
+    <Compile Include="Query\Condition.cs" />
+    <Compile Include="Query\GroupBy.cs" />
+    <Compile Include="Query\OrderBy.cs" />
+    <Compile Include="Query\QueryData.cs" />
+    <Compile Include="Query\QueryGroup.cs" />
+    <Compile Include="Query\Joinable.cs" />
+    <Compile Include="Query\QueryLimit.cs" />
+    <Compile Include="Query\QueryOrder.cs" />
+    <Compile Include="Query\QueryResult.cs" />
+    <Compile Include="Query\QueryRunner.cs" />
+    <Compile Include="Query\QuerySet.cs" />
+    <Compile Include="Query\ConditionWhere.cs" />
+    <Compile Include="Record.cs" />
+    <Compile Include="RecordEntity.cs" />
+    <Compile Include="Records.cs" />
+    <Compile Include="RecordValue.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\gems-logger\Logging\Logging.csproj">
+      <Project>{501504de-66c8-4430-b469-e1746bfb2d17}</Project>
+      <Name>Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{4396DB26-9DB6-4CA6-B558-3865D4A25763}</Project>
+      <Name>Common %28Gems\Common\Common%29</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

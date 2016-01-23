@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DF5BEAC6-B3F5-49A2-94CB-3B60FE4EE401}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Jobs</RootNamespace>
+    <AssemblyName>Jobs</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'cgTag - Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\cgTag - Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\Jobs.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'cgTag - Release|AnyCPU'">
+    <OutputPath>bin\cgTag - Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\Jobs.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Context\iEventContext.cs" />
+    <Compile Include="Context\iJobContextFactory.cs" />
+    <Compile Include="Dependencies.cs" />
+    <Compile Include="EngineService.cs" />
+    <Compile Include="Exceptions\AbortJobException.cs" />
+    <Compile Include="Exceptions\DelayStateException.cs" />
+    <Compile Include="Exceptions\EngineException.cs" />
+    <Compile Include="Exceptions\JobException.cs" />
+    <Compile Include="Exceptions\StorageException.cs" />
+    <Compile Include="iJobFactory.cs" />
+    <Compile Include="Reports\iJobReport.cs" />
+    <Compile Include="States\DailyState.cs" />
+    <Compile Include="States\CollectionState.cs" />
+    <Compile Include="States\TimeRangeState.cs" />
+    <Compile Include="Tasks\Events\EventRecorderFactory.cs" />
+    <Compile Include="Tasks\Events\iEventRecorderFactory.cs" />
+    <Compile Include="Tasks\iTaskCollection.cs" />
+    <Compile Include="JobFactory.cs" />
+    <Compile Include="iJob.cs" />
+    <Compile Include="Reports\iJobReportFactory.cs" />
+    <Compile Include="Tasks\iTaskEntry.cs" />
+    <Compile Include="Tasks\iTaskRecorder.cs" />
+    <Compile Include="Reports\JobReportFactory.cs" />
+    <Compile Include="iEngineService.cs" />
+    <Compile Include="iJobEvents.cs" />
+    <Compile Include="iJobService.cs" />
+    <Compile Include="Plugins\iPluginFactory.cs" />
+    <Compile Include="Plugins\iPluginLoader.cs" />
+    <Compile Include="Plugins\iPluginStorage.cs" />
+    <Compile Include="Plugins\PluginLoader.cs" />
+    <Compile Include="Plugins\PluginSettings.cs" />
+    <Compile Include="Plugins\PluginStorage.cs" />
+    <Compile Include="Plugins\RootSettings.cs" />
+    <Compile Include="Plugins\SerializeSettings.cs" />
+    <Compile Include="Reports\TaskReport.cs" />
+    <Compile Include="Tasks\Events\eEVENT_SEVERITY.cs" />
+    <Compile Include="Tasks\Events\EventFactory.cs" />
+    <Compile Include="Tasks\Events\EventObject.cs" />
+    <Compile Include="Reports\iTaskReport.cs" />
+    <Compile Include="Tasks\Events\EventRecorder.cs" />
+    <Compile Include="Tasks\Events\iEventFactory.cs" />
+    <Compile Include="Tasks\Events\iEventObject.cs" />
+    <Compile Include="Tasks\Events\iEventRecorder.cs" />
+    <Compile Include="Reports\JobReport.cs" />
+    <Compile Include="Tasks\NoopTask.cs" />
+    <Compile Include="Tasks\TaskEntry.cs" />
+    <Compile Include="Tasks\TaskRecorder.cs" />
+    <Compile Include="States\DelayState.cs" />
+    <Compile Include="States\eSTATE.cs" />
+    <Compile Include="States\iJobState.cs" />
+    <Compile Include="Job.cs" />
+    <Compile Include="Context\JobContext.cs" />
+    <Compile Include="JobService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="States\RunOnceState.cs" />
+    <Compile Include="Tasks\iTask.cs" />
+    <Compile Include="Tasks\Task.cs" />
+    <Compile Include="Tasks\TaskCollection.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\gems-collections\gems-collections\gems-collections.csproj">
+      <Project>{90e971d8-12b5-431d-be55-faf6a7f03179}</Project>
+      <Name>gems-collections %28Public\gems-collections\gems-collections%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\gems-logger\Logging\Logging.csproj">
+      <Project>{501504de-66c8-4430-b469-e1746bfb2d17}</Project>
+      <Name>Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\structuremap\src\StructureMap\StructureMap.csproj">
+      <Project>{3f36ea80-2f9a-4dad-ba27-5ac6163a2ee3}</Project>
+      <Name>StructureMap</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{4396DB26-9DB6-4CA6-B558-3865D4A25763}</Project>
+      <Name>Common %28Gems\Common\Common%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataSources\DataSources.csproj">
+      <Project>{BF20B96C-4D52-44E1-B8D6-E6BC5E138AC6}</Project>
+      <Name>DataSources %28Gems\DataSources\DataSources%29</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
