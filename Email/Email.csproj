@@ -31,14 +31,29 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MarkdownDeep">
-      <HintPath>..\..\NoSweatBudgets\packages\MarkdownDeep.NET.1.5\lib\.NetFramework 3.5\MarkdownDeep.dll</HintPath>
+    <Reference Include="GemsLogger, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\cgtag\node\packages\GemsLogger.1.0.0\lib\net40\GemsLogger.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Nustache.Core">
-      <HintPath>..\..\NoSweatBudgets\packages\Nustache.1.13.8.22\lib\net20\Nustache.Core.dll</HintPath>
+    <Reference Include="MarkdownDeep, Version=1.5.4615.26275, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\cgtag\node\packages\MarkdownDeep.NET.1.5\lib\.NetFramework 3.5\MarkdownDeep.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Nustache.Core, Version=1.15.3.7, Culture=neutral, PublicKeyToken=efd6f3d8f76ecd9f, processorArchitecture=MSIL">
+      <HintPath>..\..\cgtag\node\packages\Nustache.1.15.3.7\lib\net20\Nustache.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="StructureMap, Version=4.0.1.318, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\cgtag\node\packages\structuremap.4.0.1.318\lib\net40\StructureMap.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="StructureMap.Net4, Version=4.0.1.318, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\cgtag\node\packages\structuremap.4.0.1.318\lib\net40\StructureMap.Net4.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -64,14 +79,6 @@
     <Compile Include="Tasks\Report\DataValue.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\gems-logger\Logging\Logging.csproj">
-      <Project>{501504DE-66C8-4430-B469-E1746BFB2D17}</Project>
-      <Name>Logging</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\structuremap\src\StructureMap\StructureMap.csproj">
-      <Project>{3F36EA80-2F9A-4DAD-BA27-5AC6163A2EE3}</Project>
-      <Name>StructureMap</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Common\Common.csproj">
       <Project>{4396DB26-9DB6-4CA6-B558-3865D4A25763}</Project>
       <Name>Common %28Gems\Common\Common%29</Name>

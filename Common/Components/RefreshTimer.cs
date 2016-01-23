@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
-using Logging;
+using GemsLogger;
 
 namespace Common.Components
 {

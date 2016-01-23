@@ -272,6 +272,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.config" />
+    <None Include="packages.config" />
     <None Include="Resources\free3of9.ttf" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -316,18 +317,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\gems-logger\LoggerUI\LoggerUI.csproj">
-      <Project>{16f4da68-38a9-43bd-82fd-f3ac4f4b47df}</Project>
-      <Name>LoggerUI</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\gems-logger\Logging\Logging.csproj">
-      <Project>{501504de-66c8-4430-b469-e1746bfb2d17}</Project>
-      <Name>Logging</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\structuremap\src\StructureMap\StructureMap.csproj">
-      <Project>{3f36ea80-2f9a-4dad-ba27-5ac6163a2ee3}</Project>
-      <Name>StructureMap</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Common\Common.csproj">
       <Project>{4396DB26-9DB6-4CA6-B558-3865D4A25763}</Project>
       <Name>Common %28Gems\Common\Common%29</Name>
@@ -342,6 +331,22 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="GemsLogger, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\cgtag\node\packages\GemsLogger.1.0.0\lib\net40\GemsLogger.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GemsLoggerUI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\cgtag\node\packages\GemsLoggerUI.1.0.0\lib\net40\GemsLoggerUI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="StructureMap, Version=4.0.1.318, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\cgtag\node\packages\structuremap.4.0.1.318\lib\net40\StructureMap.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="StructureMap.Net4, Version=4.0.1.318, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\cgtag\node\packages\structuremap.4.0.1.318\lib\net40\StructureMap.Net4.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>

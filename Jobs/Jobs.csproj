@@ -63,8 +63,30 @@
     <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="GemsCollections, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\cgtag\node\packages\GemsCollections.1.0.0\lib\net40\GemsCollections.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GemsLogger, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\cgtag\node\packages\GemsLogger.1.0.0\lib\net40\GemsLogger.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GemsLoggerUI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\cgtag\node\packages\GemsLoggerUI.1.0.0\lib\net40\GemsLoggerUI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="StructureMap, Version=4.0.1.318, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\cgtag\node\packages\structuremap.4.0.1.318\lib\net40\StructureMap.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="StructureMap.Net4, Version=4.0.1.318, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\cgtag\node\packages\structuremap.4.0.1.318\lib\net40\StructureMap.Net4.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Context\iEventContext.cs" />
@@ -127,18 +149,6 @@
     <Compile Include="Tasks\TaskCollection.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\gems-collections\gems-collections\gems-collections.csproj">
-      <Project>{90e971d8-12b5-431d-be55-faf6a7f03179}</Project>
-      <Name>gems-collections %28Public\gems-collections\gems-collections%29</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\gems-logger\Logging\Logging.csproj">
-      <Project>{501504de-66c8-4430-b469-e1746bfb2d17}</Project>
-      <Name>Logging</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\structuremap\src\StructureMap\StructureMap.csproj">
-      <Project>{3f36ea80-2f9a-4dad-ba27-5ac6163a2ee3}</Project>
-      <Name>StructureMap</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Common\Common.csproj">
       <Project>{4396DB26-9DB6-4CA6-B558-3865D4A25763}</Project>
       <Name>Common %28Gems\Common\Common%29</Name>
@@ -148,7 +158,9 @@
       <Name>DataSources %28Gems\DataSources\DataSources%29</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
