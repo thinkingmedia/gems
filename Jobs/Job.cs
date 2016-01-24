@@ -2,13 +2,13 @@
 using System.Linq;
 using System.Threading;
 using Common.Events;
+using GemsLogger;
 using Jobs.Context;
 using Jobs.Exceptions;
 using Jobs.Plugins;
 using Jobs.States;
 using Jobs.Tasks;
 using Jobs.Tasks.Events;
-using Logging;
 
 namespace Jobs
 {

@@ -2,8 +2,8 @@
 using System.Globalization;
 using System.Windows.Forms;
 using Common.Events;
+using GemsLogger;
 using Jobs.Reports;
-using Logging;
 using Timer = System.Timers.Timer;
 
 namespace Node.Controls.Jobs

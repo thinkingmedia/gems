@@ -2,13 +2,13 @@
 using DataSources.DataSource;
 using Gems.Email.Context;
 using Gems.Email.Tasks;
+using GemsLogger;
 using Jobs;
 using Jobs.Context;
 using Jobs.Plugins;
 using Jobs.States;
 using Jobs.Tasks;
 using Jobs.Tasks.Events;
-using Logging;
 using StructureMap;
 
 namespace Gems.Email

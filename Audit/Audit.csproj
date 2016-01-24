@@ -97,14 +97,14 @@
     <Compile Include="Writer\iAuditWriter.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DataSources\DataSources.csproj">
-      <Project>{BF20B96C-4D52-44E1-B8D6-E6BC5E138AC6}</Project>
-      <Name>DataSources %28Gems\DataSources\DataSources%29</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataSources\DataSources.csproj">
+      <Project>{bf20b96c-4d52-44e1-b8d6-e6bc5e138ac6}</Project>
+      <Name>DataSources</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

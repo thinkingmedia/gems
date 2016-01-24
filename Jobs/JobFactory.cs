@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using GemsLogger;
 using Jobs.Context;
 using Jobs.Exceptions;
 using Jobs.Plugins;
 using Jobs.States;
 using Jobs.Tasks;
 using Jobs.Tasks.Events;
-using Logging;
 using StructureMap;
 
 namespace Jobs

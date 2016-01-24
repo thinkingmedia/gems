@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using Common.Annotations;
+using GemsLogger;
 using Jobs;
 using Jobs.Reports;
-using Logging;
 using StructureMap;
 
 namespace Node.Actions.Jobs

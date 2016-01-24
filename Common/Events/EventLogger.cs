@@ -5,7 +5,7 @@ using System.Net;
 using System.Net.Mail;
 using System.Text;
 using Common.Components;
-using Logging;
+using GemsLogger;
 
 namespace Common.Events
 {

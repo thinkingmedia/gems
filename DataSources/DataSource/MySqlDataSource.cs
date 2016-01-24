@@ -5,7 +5,7 @@ using System.Data.Common;
 using System.Linq;
 using DataSources.Exceptions;
 using DataSources.Query;
-using Logging;
+using GemsLogger;
 using MySql.Data.MySqlClient;
 using MySql.Data.Types;
 

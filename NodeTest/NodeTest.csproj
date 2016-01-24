@@ -67,7 +67,6 @@
     <Reference Include="System.XML" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Jobs\PreProcessOCR_WhiteLevelTest.cs" />
     <Compile Include="Scan\Bayesian\FilterTest.cs" />
     <Compile Include="Scan\Bayesian\CalculatorTest.cs" />
     <Compile Include="Scan\Bayesian\ProbabilityTest.cs" />

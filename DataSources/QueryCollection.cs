@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using DataSources.Query;
-using Logging;
+using GemsLogger;
 
 namespace DataSources
 {

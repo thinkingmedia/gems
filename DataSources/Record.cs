@@ -4,7 +4,7 @@ using System.Data;
 using System.Data.Common;
 using Common.Annotations;
 using DataSources.Query;
-using Logging;
+using GemsLogger;
 using MySql.Data.Types;
 
 namespace DataSources

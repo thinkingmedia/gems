@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Windows.Forms;
+using GemsLogger;
 using Jobs.Plugins;
-using Logging;
 using Node.Properties;
 
 namespace Node

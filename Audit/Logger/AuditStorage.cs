@@ -10,7 +10,7 @@ namespace Audit.Logger
         /// <summary>
         /// Logging
         /// </summary>
-        private static readonly Logging.Logger _logger = Logging.Logger.Create(typeof(AuditStorage));
+        private static readonly GemsLogger.Logger _logger = GemsLogger.Logger.Create(typeof(AuditStorage));
 
         /// <summary>
         /// Audit logs for each record that is processed.

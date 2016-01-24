@@ -1,5 +1,4 @@
-﻿using LoggerUI;
-using Logging;
+﻿using GemsLoggerUI;
 using Node.Controls.Jobs.Tasks;
 
 namespace Node.Controls.Jobs
@@ -32,7 +31,7 @@ namespace Node.Controls.Jobs
         /// </summary>
         private void InitializeComponent()
         {
-            this.logger = new LoggerUI.LoggerControl();
+            this.logger = new GemsLoggerUI.LoggerControl();
             this.headerPanel = new System.Windows.Forms.Panel();
             this._headerJob = new Node.Controls.Jobs.HeaderJob();
             this._tabs = new System.Windows.Forms.TabControl();

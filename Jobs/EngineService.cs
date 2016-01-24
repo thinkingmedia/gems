@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using Common.Events;
+using GemsLogger;
 using Jobs.Exceptions;
 using Jobs.Plugins;
-using Logging;
 using StructureMap;
 
 namespace Jobs

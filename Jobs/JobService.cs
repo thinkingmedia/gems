@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using Common.Events;
+using GemsLogger;
 using Jobs.Reports;
 using Jobs.States;
-using Logging;
 using StructureMap;
 
 namespace Jobs

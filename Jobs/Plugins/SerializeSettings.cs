@@ -4,8 +4,8 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text.RegularExpressions;
+using GemsLogger;
 using Jobs.Exceptions;
-using Logging;
 
 namespace Jobs.Plugins
 {

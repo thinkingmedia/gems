@@ -2,11 +2,11 @@
 using System.Threading;
 using System.Windows.Forms;
 using Common.Events;
+using GemsLogger;
+using GemsLogger.Formatters;
 using Jobs;
 using Jobs.Reports;
 using Jobs.States;
-using Logging;
-using Logging.Formatters;
 
 namespace Node.Controls.Jobs
 {
