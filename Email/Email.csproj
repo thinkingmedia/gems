@@ -32,7 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="GemsLogger, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\cgtag\node\packages\GemsLogger.1.0.0\lib\net40\GemsLogger.dll</HintPath>
+      <HintPath>..\..\gems-logger\GemsLogger\bin\Debug\GemsLogger.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="MarkdownDeep, Version=1.5.4615.26275, Culture=neutral, processorArchitecture=MSIL">
